@@ -1,4 +1,4 @@
-import { useState } from 'react';
+
 import './Intro.css';
 import Typewriter from 'typewriter-effect'
 import { intro } from '../../plot';

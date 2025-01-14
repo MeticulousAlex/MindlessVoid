@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './Card.css';
 import { useGlitch } from 'react-powerglitch'
-import Riddle from '../Riddle/Riddle';
 
 interface Card{
   cardParam:{icon: string;}
@@ -71,7 +70,6 @@ export default function Card(props : Card){
   );
 
     const [isCardDropped, setIsCardDropped] = useState(false);
-    const [isCardOpened, setIsCardOpened] = useState(false);
 
     const drop = () => {
       setIsCardDropped(true);

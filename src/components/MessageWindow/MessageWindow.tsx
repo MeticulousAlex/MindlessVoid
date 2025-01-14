@@ -2,7 +2,7 @@ import './MessageWindow.css';
 import Typewriter from 'typewriter-effect';
 import Message from '../Message/Message';
 import {plot} from '../../plot';
-import { SetStateAction, useState } from 'react';
+import { useState } from 'react';
 
 interface MessageWindow {
     isTalkingAnimation: boolean,
