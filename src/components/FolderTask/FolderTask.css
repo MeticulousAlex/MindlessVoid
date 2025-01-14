@@ -24,7 +24,7 @@
     background-color:gray;
     height:100%;
     border-radius:5px;
-    align-content: center;
+    align-items: center;
     text-align: center;
     transition:opacity linear 0.1s;
     cursor:pointer;
