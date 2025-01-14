@@ -5,7 +5,7 @@
 // folder -> appData -> CloudSync -> API -> i557Udbcd.jpg
 
 export const folderSystemTwo = [
-        {option:[{paths: [{name:'.../', glitched:false, file:false }]}]},
+        {option:[{paths: [{name:'systemData/', glitched:false, file:false }]}]},
         {option:[
             {paths: [{name:'AdminTools/', glitched: false, file:false}, {name:'appData/', glitched: false, file:false}, {name:'BackupFiles/', glitched: false, file:false}, {name:'ConfigTools/', glitched: false, file:false}]}
         ]},
