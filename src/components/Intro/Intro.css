@@ -1,0 +1,11 @@
+.intro{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.intro__message{
+    font-family: Pixelify;
+    font-size: 30px;
+}

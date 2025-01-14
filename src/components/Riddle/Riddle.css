@@ -1,0 +1,116 @@
+.riddle{
+    position: absolute;
+    top:50%;
+    left:15%;
+    transform: translateY(-50%);
+    width:70%;
+    height:40%;
+    border:1px solid orangered;
+    border-radius:15px;
+    display:flex;
+    align-items: center;
+    box-sizing: border-box;
+    animation: riddleAppear 0.5s ease 1;
+}
+
+.riddle_dropped{
+    animation: dropRiddle 1s ease 1;
+    top:150%;
+    left:15%;
+    /* transform: translate(-50%, -50%) rotate(-30deg); */
+}
+
+
+.riddle__block{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    animation: appear 2s linear 1; 
+    border-radius: 20px;
+    background-color: orangered;
+    width:15%;
+    margin:0 3%;
+    aspect-ratio: 1;
+    transition: opacity linear 0.1s;
+    cursor:pointer;
+    &:hover{
+        opacity:0.6;
+    }
+    /* transition: opacity linear 1s, width linear 1s 1s; */
+}
+
+.riddle__block_hidden{
+    animation: disappear 1s linear 1;
+    top:10%;
+    width:0;
+    opacity:0;
+    margin:0
+}
+
+.riddle__icon{
+    width:60%;
+}
+
+/* @keyframes disappear{
+    0%{
+        opacity: 1;
+        top:0;
+        width:19%;
+        margin: 3%;
+    }
+    25%{
+        opacity:0;
+        top:10%;
+        width:19%;
+        margin:3%;
+    }
+    100%{
+        top:10%;
+        width:0;
+        margin:0
+    }
+} */
+
+/* @keyframes appear{
+    0%{
+        opacity: 0;
+        width:0;
+        margin:0
+    }
+    50%{
+        opacity:0;
+        width:19%;
+        margin:3%;
+    }
+    100%{
+        opacity:1
+    }
+} */
+
+@keyframes dropRiddle{
+    0%{
+        top:50%;
+    }
+    10%{
+        top:45%;
+    }
+    100%{
+        top:150%;
+        transform: rotate(-30deg);
+    }
+}
+
+@keyframes riddleAppear {
+    0%{
+        top:70%;
+        opacity:0;
+    }
+    /* 50%{
+        top:70%;
+        opacity:0;
+    } */
+    100%{
+        top:50%;
+        opacity:1;
+    }
+}

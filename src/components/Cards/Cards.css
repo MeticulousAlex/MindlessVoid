@@ -1,0 +1,116 @@
+
+.cards{
+    position:absolute;
+    top:60%;
+    left:50%;
+    height:70%; 
+    /* change height to 80% */
+    width:80%;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    transform:translate(-50%,-50%);
+    transition: all 0.5s ease;  
+}
+
+.cards_hidden{
+    top:70%;
+    opacity: 0;
+    pointer-events: none;
+    /* display: none; */
+}
+
+.cards_compressed{
+    animation: compress 1s linear 1;
+    display:none;
+}
+
+.cards__title{
+    position: relative;
+    font-family: Pixelify;
+    margin:0 0 1rem;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.cards__title p{
+    margin:0;
+    transform: translateY(-3rem);
+}
+
+.cards__title_dropped{
+    animation: dropTitle 3s ease 1;
+    width:0;
+    height:0;
+    top:120vh;
+    margin:0;
+    transform: rotate(-30deg);
+}
+
+.cards__title_shaking{
+    animation: shakeCards 0.3s infinite;
+}
+
+.cards__container{
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+
+.cards__container_shaking{
+    animation: shakeCards 0.3s infinite;
+}
+
+@keyframes dropTitle{
+    0%{
+        top:0%;
+        width:20vw;
+        transform: rotate(0deg);
+    }
+    10%{
+        top:-10%;
+    }
+    40%{
+        width:20vw;
+    }
+
+    75%{
+        top:110vh;
+        transform: rotate(-30deg);
+        width:0;
+        height:0;
+        margin:0;
+    }
+}
+
+
+
+@keyframes compress{
+    0%{
+        display:block;
+        width:80%;
+    }
+    50%{
+        display:block;
+        width:0;
+    }
+    100%{
+        width:0;
+        display:none;
+    }
+}
+
+@keyframes shakeCards {
+    0% { transform: translate(1%, 1%) rotate(0deg); }
+    10% { transform: translate(-1%, -9%) rotate(-1deg); }
+    20% { transform: translate(-3%, 0%) rotate(1deg); }
+    30% { transform: translate(3%, 2%) rotate(0deg); }
+    40% { transform: translate(1%, -1%) rotate(1deg); }
+    50% { transform: translate(-11%, 2%) rotate(-1deg); }
+    60% { transform: translate(-3%, 7%) rotate(0deg); }
+    70% { transform: translate(3%, 1%) rotate(-1deg); }
+    80% { transform: translate(-1%, -1%) rotate(1deg); }
+    90% { transform: translate(1%, 24%) rotate(0deg); }
+    100% { transform: translate(1%, -2%) rotate(-1deg); }
+}

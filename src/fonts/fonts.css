@@ -1,0 +1,23 @@
+@font-face {
+    font-family: Pixelify;
+    src: url('./Pixelify/static/PixelifySans-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Pixelify;
+    src: url('./Pixelify/static/PixelifySans-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Pixelify;
+    src: url('./Pixelify/static/PixelifySans-SemiBold.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Pixelify;
+    src: url('./Pixelify/static/PixelifySans-Bold.ttf');
+    font-weight: 700;
+}

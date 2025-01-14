@@ -1,0 +1,125 @@
+#root {
+  width:100%;
+  height:100vh;
+  display: flex;
+  align-items: center;
+}
+
+.app{
+  width:100%;
+}
+
+.hand{
+  position: absolute;
+  width:60%;
+  top:50%;
+  visibility: hidden;
+}
+
+.fist{
+  position: absolute;
+  width:60%;
+  top:40%;
+  visibility: hidden;
+}
+
+.fist_left{
+  left:-20%;
+  animation: fistKnockLeft 8s linear 1;
+  z-index: 6;
+}
+
+.fist_right{
+  right:-20%;
+  animation: fistKnockRight 8s linear 1;
+  z-index: 5;
+}
+
+.hand_left{
+  left:-20%;
+  animation: handLiftLeft 4s linear 1;
+}
+
+.hand_right{
+  right:-20%;
+  animation: handLiftRight 4s linear 1;
+}
+
+@keyframes handLiftLeft {
+  0%{
+    visibility: visible;
+    top:160%;
+    left:-20%;
+  }
+  75%{
+    top:50%;
+    left:-20%;
+  }
+  100%{
+    visibility: visible;
+    left:-100%;
+  }
+}
+
+@keyframes handLiftRight {
+  0%{
+    visibility: visible;
+    top:160%;
+    right:-20%;
+  }
+  75%{
+    top:50%;
+    right:-20%;
+  }
+  100%{
+    visibility: visible;
+    display: block;
+    right:-100%;
+  }
+}
+
+@keyframes fistKnockLeft {
+  0%{
+    left:-100%;
+  }
+  70%{
+    visibility: visible;
+    left:-100%;
+  }
+  80%{
+    left:-9%;
+  }
+  90%{
+    left:-9%;
+  }
+  100%{
+    visibility: visible;
+    left:-100%
+  }
+}
+
+@keyframes fistKnockRight {
+  0%{
+    right:-100%;
+  }
+  70%{
+    visibility: visible;
+    right:-100%;
+  }
+  80%{
+    right:-9%;
+  }
+  90%{
+    right:-9%;
+  }
+  100%{
+    visibility: visible;
+    right:-100%
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}

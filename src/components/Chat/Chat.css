@@ -1,0 +1,58 @@
+.chat{
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    gap:2%;
+    align-items: center;
+    width:60%;
+    height:30%;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(71, 71, 71,0);
+    border-radius: 20px;
+    /* border: 1px solid red; */
+    transition: all linear 0.5s;
+    /* pointer-events: none; */
+    animation:chatAppear 2s ease 1;
+}
+
+.chat_lifted{
+    top:0%;
+    height:10%;
+    transform:translate(-50%, 0%);
+    animation:none
+}
+
+.chat_shaking{
+    animation: shakeChat 0.3s infinite;
+}
+@keyframes chatAppear {
+    0%{
+        top:60%;
+        opacity:0;
+    }
+    50%{
+        top:60%;
+        opacity:0;
+    }
+    100%{
+        top:50%;
+        opacity:1;
+    }
+
+}
+
+@keyframes shakeChat {
+    0% { transform: translate(-49%, 49%)}
+    10% { transform: translate(-51%, 42%)}
+    20% { transform: translate(-53%, 20%)}
+    30% { transform: translate(-47%, 48%) }
+    40% { transform: translate(-49%, 41%)}
+    50% { transform: translate(-51%, -8%)}
+    60% { transform: translate(-53%, 49%)}
+    70% { transform: translate(-47%, 6%)}
+    80% { transform: translate(-51%, -21%)}
+    90% { transform: translate(-49%, 48%)}
+    100% { transform: translate(-49%, 46%)}
+}

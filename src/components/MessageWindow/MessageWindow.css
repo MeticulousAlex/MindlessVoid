@@ -1,0 +1,159 @@
+.message-window{
+    position:relative;
+    /* right:5%; */
+    width:65%;
+    height:80%;
+    box-sizing: border-box;
+    background-color:rgb(46, 46, 46);
+    border-radius:10px;
+    padding:10px;
+    transition:all 0.5s linear;
+}
+
+.message-window_lifted{
+    /* top:10%; */
+}
+
+.message-window__continue{
+    position: absolute;
+    text-wrap:nowrap;
+    bottom: 0;
+    left:50%;
+    transform: translateX(-50%);
+    font-family: Pixelify;
+    animation: blink 0.7s 1s linear infinite alternate;
+    opacity:0;
+}
+
+.message-window_lifted .message-window__continue{
+    display:none;
+}
+
+.message-window__answers{
+    position:absolute;
+    left:0;
+    bottom:-25%;
+    width:100%;
+    height:20%;
+    display: flex;
+    justify-content: space-between;
+    gap:1rem;
+    transition: opacity linear 0.3s, bottom linear 0.3s; 
+    /* &::after{
+        position:absolute;
+        content: '';
+        width:100%;
+        height:100%;
+        background-color:;
+    } */
+    animation: answersAppear 1s ease 1;
+}
+
+.message-window__answers_lifted{
+    bottom:calc(-60% - 1rem);
+    height:60%;
+    animation:answersLiftedAppear 1s ease 1;
+}
+
+.message-window__answers_hidden{
+    opacity: 0;
+    bottom:-35%;
+    animation: answersDisappear 0.5s ease 1;
+}
+
+.message-window__answers_lifted-hidden{
+    opacity: 0;
+    bottom:-75%;
+    animation: answersLiftedDisappear 1s ease 1;
+}
+
+.message-window__answer{
+    width:100%;
+    font-family: Pixelify;
+    font-size: 20px;
+}
+
+.message-window__answer{
+    width:100%;
+    font-family: Pixelify;
+    font-size: 16px;
+}
+
+.message-window__user-reply{
+    position: absolute;
+    bottom: -20%;
+    text-align:left;
+    font-family: Pixelify;
+    font-weight: 400;
+    font-size: 22px;
+    width:100%;
+}
+
+@keyframes blink {
+    0%{
+        opacity: 40%;
+    }
+    100%{
+        opacity:100%
+    }
+}
+
+@keyframes answersAppear{
+    0%{
+        opacity: 0;
+        bottom:-35%;
+    }
+    20%{
+        opacity: 0;
+        bottom:-35%;
+    }
+    100%{
+        opacity: 1;
+        bottom:-25%; 
+    }
+}
+
+@keyframes answersLiftedAppear{
+    0%{
+        opacity: 0;
+        bottom:calc(-70% - 1rem);
+    }
+    20%{
+        opacity: 0;
+        bottom:calc(-70% - 1rem);
+    }
+    100%{
+        opacity: 1;
+        bottom:calc(-60% - 1rem);
+    }
+}
+
+@keyframes answersDisappear {
+    0%{
+        opacity: 1;
+        bottom:-25%;
+    }
+    20%{
+        opacity: 1;
+        bottom:-25%;
+    }
+    100%{
+        opacity: 0;
+        bottom:-35%;
+    }
+}
+
+@keyframes answersLiftedDisappear {
+    0%{
+        opacity: 1;
+        bottom:calc(-60% - 1rem);
+    }
+    20%{
+        opacity: 1;
+        bottom:calc(-60% - 1rem);
+    }
+    100%{
+        opacity: 0;
+        bottom:calc(-70% - 1rem);
+    }
+}
